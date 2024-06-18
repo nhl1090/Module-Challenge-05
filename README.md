@@ -19,6 +19,8 @@ My live application was designed in accordance to Challenge 05 of the UT Coding 
 
 My app can be found here: https://nhl1090.github.io/Task-Board/
 
+Example:
+![alt text](Task-Board.png)
 
 ## Credits
 
