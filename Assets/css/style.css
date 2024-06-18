@@ -1,3 +1,11 @@
+.card.border-warning {
+  border: 2px solid yellow;
+}
+
+.card.border-danger {
+  border: 2px solid red;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
