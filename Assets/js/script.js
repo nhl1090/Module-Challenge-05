@@ -46,29 +46,29 @@ function renderTaskList() {
 
 // Created a function to handle adding a new task
 function handleAddTask(event) {
-  event.preventDefault();
-
-  const title = $("#taskTitle").val().trim();
-  const description = $("#taskDescription").val().trim();
-  const dueDate = $("#taskDueDate").val().trim();
-
-  if (title && description && dueDate) {
-    const task = {
-      id: generateTaskId(),
-      title,
-      description,
-      dueDate,
-      status: "todo"
-    };
-
-    taskList.push(task);
-    saveTasks();
-    renderTaskList();
-
-    $("#formModal").modal("hide");
-    $("#taskForm")[0].reset();
+    event.preventDefault();
+  
+    const title = $("#taskTitle").val().trim();
+    const description = $("#taskDescription").val().trim();
+    const dueDate = $("#taskDueDate").val().trim();
+  
+    if (title && description && dueDate) {
+      const task = {
+        id: generateTaskId(),
+        title,
+        description,
+        dueDate,
+        status: "todo"
+      };
+  
+      taskList.push(task);
+      saveTasks();
+      renderTaskList();
+  
+      $("#formModal").modal("hide");
+      $("#taskForm")[0].reset();
+    }
   }
-}
 
 // Created a function to handle deleting a task
 function handleDeleteTask(event) {
