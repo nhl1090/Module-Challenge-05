@@ -1,10 +1,12 @@
 /* Border color for task cards nearing the deadline or overdue */
 .card.border-warning {
   border: 2px solid yellow;
+  background-color: yellow;
 }
 
 .card.border-danger {
   border: 2px solid red;
+  background-color: red;
 }
 
 /* General body styling */
