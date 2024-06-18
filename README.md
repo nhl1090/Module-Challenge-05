@@ -3,7 +3,9 @@
 
 ## Description
 
+The purpose of this application was to create a simple task board application that allows teams to manage project tasks. The user is able to keep track of due dates and progress for each item.
 
+This app runs in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
 
 ## Installation
@@ -40,5 +42,8 @@ I referred to the following sites for guidance on the project:
 
 - W3 Schools (https://www.w3schools.com/)
 
+
 ## License
+
 MIT License.
+
