@@ -2,28 +2,28 @@
 let taskList = JSON.parse(localStorage.getItem("tasks")) || [];
 let nextId = JSON.parse(localStorage.getItem("nextId")) || 1;
 
-// Function to generate a unique task id
-function generateTaskId() {
-    return nextId++;
-}
-
 // Function to save tasks and nextId to localStorage
 function saveTasks() {
     localStorage.setItem("tasks", JSON.stringify(taskList));
     localStorage.setItem("nextId", JSON.stringify(nextId));
 }
 
+// Function to generate a unique task id
+function generateTaskId() {
+    return nextId++;
+}
+
 // Function to create a task card
 function createTaskCard(task) {
     const taskCard = $(`
-        <div class="card mb-2" data-id="${task.id}">
-            <div class="card-body">
-                <h5 class="card-title">${task.title}</h5>
-                <p class="card-text">${task.description}</p>
-                <p class="card-text"><small class="text-muted">Due: ${task.dueDate}</small></p>
-                <button class="btn btn-danger btn-sm delete-task">Delete</button>
-            </div>
+      <div class="card mb-2 task-card" data-id="${task.id}">
+        <div class="card-body">
+          <h5 class="card-title">${task.title}</h5>
+          <p class="card-text">${task.description}</p>
+          <p class="card-text"><small class="text-muted">Due: ${task.dueDate}</small></p>
+          <button class="btn btn-danger btn-sm delete-task">Delete</button>
         </div>
+      </div>
     `);
 
     // Features for upcoming deadlines
@@ -46,7 +46,7 @@ function renderTaskList() {
         $(`#${task.status}-cards`).append(card);
     });
 
-    $('.card').draggable({
+    $('.task-card').draggable({
         revert: 'invalid',
         helper: 'clone'
     });
@@ -66,7 +66,7 @@ function handleAddTask(event) {
             title,
             description,
             dueDate,
-            status: "todo"
+            status: "to-do"
         };
 
         taskList.push(task);
@@ -80,7 +80,7 @@ function handleAddTask(event) {
 
 // Function to handle deleting a task
 function handleDeleteTask(event) {
-    const taskId = $(event.target).closest(".card").data("id");
+    const taskId = $(event.target).closest(".task-card").data("id");
     taskList = taskList.filter(task => task.id !== taskId);
     saveTasks();
     renderTaskList();
@@ -99,7 +99,7 @@ function handleDrop(event, ui) {
     }
 }
 
-// Changes made. When the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
+// When the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
 $(document).ready(function () {
     renderTaskList();
 
@@ -107,11 +107,11 @@ $(document).ready(function () {
     $(document).on("click", ".delete-task", handleDeleteTask);
 
     $(".lane").droppable({
-        accept: ".card",
+        accept: ".task-card",
         drop: handleDrop
     });
 
-    $("#taskDueDate").datepicker({
+    $("#taskDeadline").datepicker({
         dateFormat: "yy-mm-dd"
     });
 });

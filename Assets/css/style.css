@@ -1,24 +1,13 @@
-/* Border color for task cards nearing the deadline or overdue */
-.card.border-warning {
-  border: 2px solid yellow;
-}
 
-.card.border-danger {
-  border: 2px solid red;
-}
-
-/* General body styling */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
 
-/* Swim-lanes styling */
 .swim-lanes {
   min-height: 60vh;
 }
 
-/* Task card styling */
 .task-card {
   margin: 0 auto;
 }
@@ -27,7 +16,14 @@ body {
   cursor: grab;
 }
 
-/* Modal styling */
+.card.border-warning {
+  border: 2px solid yellow;
+}
+
+.card.border-danger {
+  border: 2px solid red;
+}
+
 .modal-header {
   background-color: white;
 }
@@ -46,7 +42,6 @@ body {
   margin: 1.75rem auto;
 }
 
-/* Task form styling */
 #taskForm .form-label {
   font-weight: 600;
 }
@@ -62,6 +57,6 @@ body {
 }
 
 #taskForm .btn-primary:hover {
-  background-color: darkgreen;
+  background-color: green;
   border-color: black;
 }
