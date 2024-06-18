@@ -58,7 +58,7 @@ function handleAddTask(event) {
 
     const title = $("#taskTitle").val().trim();
     const description = $("#taskDescription").val().trim();
-    const dueDate = $("#taskDueDate").val().trim();
+    const dueDate = $("#taskDeadline").val().trim();
 
     if (title && description && dueDate) {
         const task = {
