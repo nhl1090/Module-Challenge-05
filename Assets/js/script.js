@@ -2,15 +2,15 @@
 let taskList = JSON.parse(localStorage.getItem("tasks")) || [];
 let nextId = JSON.parse(localStorage.getItem("nextId")) || 1;
 
+// Function to generate a unique task id
+function generateTaskId() {
+    return nextId++;
+}
+
 // Function to save tasks and nextId to localStorage
 function saveTasks() {
     localStorage.setItem("tasks", JSON.stringify(taskList));
     localStorage.setItem("nextId", JSON.stringify(nextId));
-}
-
-// Function to generate a unique task id
-function generateTaskId() {
-    return nextId++;
 }
 
 // Function to create a task card
