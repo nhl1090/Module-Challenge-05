@@ -44,10 +44,27 @@ function renderTaskList() {
     });
   }
 
-// Todo: create a function to handle adding a new task
-function handleAddTask(event){
-
-}
+// Created a function to handle adding a new task
+function handleAddTask(event) {
+    event.preventDefault();
+    let title = $('#taskTitle').val();
+    let description = $('#taskDescription').val();
+    let deadline = $('#taskDeadline').val();
+  
+    let task = {
+      id: generateTaskId(),
+      title,
+      description,
+      deadline,
+      status: 'todo'
+    };
+  
+    taskList.push(task);
+    localStorage.setItem('tasks', JSON.stringify(taskList));
+    localStorage.setItem('nextId', JSON.stringify(nextId));
+    $('#formModal').modal('hide');
+    renderTaskList();
+  }
 
 // Todo: create a function to handle deleting a task
 function handleDeleteTask(event){
