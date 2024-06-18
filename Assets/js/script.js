@@ -13,8 +13,6 @@ function generateTaskId() {
     return nextId++;
 }
 
-
-
 // Function to create a task card
 function createTaskCard(task) {
     const taskCard = $(`
@@ -60,7 +58,7 @@ function handleAddTask(event) {
 
     const title = $("#taskTitle").val().trim();
     const description = $("#taskDescription").val().trim();
-    const dueDate = $("#taskDueDate").val().trim();
+    const dueDate = $("#taskDeadline").val().trim();
 
     if (title && description && dueDate) {
         const task = {
@@ -101,7 +99,7 @@ function handleDrop(event, ui) {
     }
 }
 
-// Changes made. When the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
+// When the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
 $(document).ready(function () {
     renderTaskList();
 
