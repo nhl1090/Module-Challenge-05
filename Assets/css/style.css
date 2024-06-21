@@ -43,6 +43,10 @@ body {
   border: none;
 }
 
+.todo-card {
+  z-index: 10;
+}
+
 #formModal .modal-dialog {
   max-width: 500px;
   margin: 1.75rem auto;

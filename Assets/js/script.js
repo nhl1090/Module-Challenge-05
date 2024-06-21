@@ -16,7 +16,7 @@ function generateTaskId() {
 // Function to create a task card
 function createTaskCard(task) {
     const taskCard = $(`
-        <div class="card mb-2" data-id="${task.id}">
+        <div class="card mb-2 todo-card"  data-id="${task.id}">
             <div class="card-body">
                 <h5 class="card-title">${task.title}</h5>
                 <p class="card-text">${task.description}</p>
@@ -40,7 +40,7 @@ function createTaskCard(task) {
 
 // Function to render the task list and make cards draggable
 function renderTaskList() {
-    $('#todo-cards, #in-progress-cards, #done-cards').empty();
+    $('#to-do-cards, #in-progress-cards, #done-cards').empty();
     taskList.forEach(task => {
         let card = createTaskCard(task);
         $(`#${task.status}-cards`).append(card);
