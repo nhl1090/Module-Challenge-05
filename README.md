@@ -33,6 +33,8 @@ This project is licensed under the ![MIT license](https://opensource.org/license
 ## Credits
 - Atlassian
     - (https://www.atlassian.com/git)
+- Date-Fns
+    - (https://date-fns.org/)
 - Day.js
     - (https://day.js.org/)
 - edX
@@ -45,12 +47,18 @@ This project is licensed under the ![MIT license](https://opensource.org/license
     - (https://coding-boot-camp.github.io/full-stack/git/getting-started-with-git)
     - (https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
     - (https://coding-boot-camp.github.io/full-stack/html/html-cheatsheet)
+    - (https://moment.github.io/luxon/#/)
+    - (https://js-joda.github.io/js-joda/)
 - GitLab
     - (https://docs.gitlab.com/ee/user/ssh.html#add-an-ssh-key-to-your-gitlab-account)
 - Google
     - (https://developer.chrome.com/docs/devtools/)
+    - (https://fonts.google.com/)
 - jQuery
     - (https://jquery.com/)
+    - (https://api.jquery.com/)
+    - (https://api.jquery.com/category/traversing/)
+    - (https://api.jquery.com/category/events/)
 - jQuery User Interface
     - (https://jqueryui.com/)
 - MDN 
