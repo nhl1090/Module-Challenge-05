@@ -66,7 +66,7 @@ function handleAddTask(event) {
             title,
             description,
             dueDate,
-            status: "todo"
+            status: "to-do" // Corrected status to match the HTML id
         };
 
         taskList.push(task);
@@ -111,7 +111,7 @@ $(document).ready(function () {
         drop: handleDrop
     });
 
-    $("#taskDueDate").datepicker({
+    $("#taskDeadline").datepicker({
         dateFormat: "yy-mm-dd"
     });
 });
